@@ -1,0 +1,22 @@
+---
+// Projets/Onglets/Headers — ligne de prévisualisation (écran Projets).
+// Default = titre 56px sans-serif sur bande beige moyen.
+// Hover = titre 46px italique + apparition des tags + flèche longue + trait bas.
+interface Props {
+  href: string;
+  title: string;
+  tags?: string[];
+}
+const { href, title, tags = [] } = Astro.props;
+---
+<a class="project-row" href={href} data-cursor-hover>
+  <p class="project-row__title" set:html={title} />
+  <div class="project-row__meta">
+    {tags.length > 0 && (
+      <div class="project-row__tags">
+        {tags.map((t) => <span class="project-row__tag">{t}</span>)}
+      </div>
+    )}
+    <span class="project-row__arrow" aria-hidden="true"></span>
+  </div>
+</a>

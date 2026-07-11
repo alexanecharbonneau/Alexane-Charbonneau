@@ -1,0 +1,27 @@
+---
+// En-tête d'étude de cas : titre + rangée de groupes de méta
+// (Expertises / Équipe / Contexte / Destinataire / Mention).
+interface Group {
+  label: string;
+  /** Chaque item peut contenir du HTML (ex. lien souligné). */
+  items: string[];
+}
+interface Props {
+  title: string;
+  groups: Group[];
+}
+const { title, groups } = Astro.props;
+---
+<div class="case-hero">
+  <p class="case-hero__title">{title}</p>
+  <div class="tags-row">
+    {groups.map((g) => (
+      <div class="tag-group">
+        <p class="tag-group__label">{g.label}</p>
+        <div class="tag-group__list">
+          {g.items.map((it) => <p class="tag-group__item" set:html={it} />)}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

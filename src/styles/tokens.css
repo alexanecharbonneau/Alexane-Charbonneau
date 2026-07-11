@@ -1,0 +1,77 @@
+/* =========================================================================
+   TOKENS — extraits directement du fichier Figma (styles + variables)
+   Aucune valeur inventée. Voir commentaires pour les valeurs "observées"
+   (mesurées sur les composants) là où le Figma ne définit pas de token
+   formel (espacement, rayon).
+   ========================================================================= */
+
+@font-face {
+  font-family: 'PP Editorial Old';
+  /* Servie depuis public/ → chemin absolu depuis la racine du site. */
+  src: url('/assets/fonts/PPEditorialOld-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  /* ---- Couleurs (styles Figma) ---- */
+  --color-pomme: #CDF84F;        /* curseur custom "Vert Pomme" */
+  --color-anthracite: #1E1E1E;
+  --color-gris: #6D6B68;
+  --color-blanc: #FFFFFF;
+  --color-beige: #FCF7EF;        /* fond principal du site */
+  --color-beige-moyen: #E9E2D7;  /* masque dentelé Profile */
+  --color-beige-fonce: #C1BAAF;
+
+  /* Variable Figma unique du fichier : FOND (blanc à 80% d'opacité) */
+  --color-fond-overlay: rgba(255, 255, 255, 0.8);
+
+  /* ---- Typographie ----
+     "Inclusive Sans" est un font Google Fonts (libre), chargé via CDN.
+     "PP Editorial Old" est maintenant self-hosted (assets/fonts/, fournie
+     par Alexane) avec "Instrument Serif" en secours si le fichier venait
+     à manquer. */
+  --font-sans: 'Inclusive Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif-italic: 'PP Editorial Old', 'Instrument Serif', Georgia, serif;
+
+  --fs-h1: 56px;
+  --fs-h2: 32px;
+  --fs-emphasis-large: 46px;
+  --fs-text-strong: 22px;
+  /* Aligné sur la variable Figma "Text/Body" (18px). L'ancien code utilisait
+     20px : divergence corrigée pour coller au token Figma. */
+  --fs-text-body: 18px;
+  --fs-label-nametag: 18px;
+  --fs-label: 16px;
+  --fs-text-small: 14px;
+  --fs-note: 12px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /* ---- Espacement / rayons ----
+     Aucune variable Figma formelle n'existe pour ça : valeurs mesurées
+     directement sur les composants du design system. */
+  --radius-none: 0px;
+  --radius-pill: 100px; /* tags/chips */
+
+  --space-13: 13px;  /* gap accordéon fermé/hover */
+  --space-20: 20px;  /* padding navbar, gap bouton */
+  --space-30: 30px;  /* gap accordéon ouvert */
+  --space-60: 60px;
+  --space-100: 100px;
+  --space-110: 110px; /* padding horizontal du contenu (écrans 1024px) */
+
+  /* ---- Ombres ----
+     Aucun style d'effet défini dans tout le fichier Figma : design plat.
+     Ne pas ajouter d'ombres (décision validée). */
+
+  /* ---- Layout ---- */
+  --screen-width: 1024px;
+
+  /* NavBar/Component mesuré dans Figma (padding 20 + contenu 45 = 85px).
+     Sert à compenser le header/footer désormais position:fixed. */
+  --header-height: 85px;
+  --footer-height: 85px;
+}

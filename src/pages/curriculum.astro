@@ -1,0 +1,102 @@
+---
+// Page CURRICULUM (frame Figma 249:706).
+import Base from '../layouts/Base.astro';
+import Chip from '../components/Chip.astro';
+import BackLink from '../components/BackLink.astro';
+---
+<Base title="Curriculum — Alexane Charbonneau" bodyGap="45px">
+  <div class="screen__content" style="display:flex;flex-direction:column;gap:60px;">
+    <BackLink href="/" label="Accueil" />
+
+    <Chip label="Curriculum" />
+
+    <div style="display:flex;gap:100px;">
+      <div class="cv-column">
+        <p class="cv-column__heading">Expérience</p>
+        <div class="cv-list">
+          <div class="cv-entry">
+            <p class="cv-entry__title">Designer UX/UI</p>
+            <div class="cv-entry__meta">
+              <p>Laboratoire de recherche Co-DOT</p>
+              <p>2026</p>
+            </div>
+          </div>
+          <div class="cv-entry" style="width:240px;">
+            <p class="cv-entry__title">Consultante en design de service</p>
+            <div class="cv-entry__meta">
+              <p>CISSS de Chaudière-Appalaches</p>
+              <p>2026</p>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <p class="cv-entry__title">Designer UI/UX</p>
+            <div class="cv-entry__meta">
+              <p>DataDis</p>
+              <p>2024-2025</p>
+            </div>
+          </div>
+          <div class="cv-entry" style="width:154px;">
+            <p class="cv-entry__title">Graphiste</p>
+            <div class="cv-entry__meta">
+              <p>Maca Marketing Corporatif</p>
+              <p>2022-2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-column">
+        <p class="cv-column__heading">Formation</p>
+        <div class="cv-list">
+          <div class="cv-entry" style="width:425px;">
+            <p class="cv-entry__title">Maîtrise en design d’interaction</p>
+            <div class="cv-entry__meta">
+              <p>Université Laval</p>
+              <p>2026</p>
+            </div>
+          </div>
+          <div class="cv-entry" style="width:425px;">
+            <p class="cv-entry__title">Baccalauréat en design graphique</p>
+            <div class="cv-entry__meta">
+              <p>Université Laval</p>
+              <p>2022-2025</p>
+            </div>
+          </div>
+          <div class="cv-entry" style="width:425px;">
+            <p class="cv-entry__title">Technique en graphisme (DEC)</p>
+            <div class="cv-entry__meta">
+              <p>Cégep de Sainte-Foy</p>
+              <p>2019-2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bouton CV dans la 2e colonne, poussé en bas (margin-top:auto) : les
+             colonnes ayant la même hauteur, il s'aligne sur le bas de la colonne
+             Expérience, soit la ligne « 2022-2024 ». -->
+        <a class="btn-cv" style="margin-top:auto;" href="/assets/cv-alexane-charbonneau.pdf" data-cursor-hover download>
+          <span class="btn-cv__icon-stack">
+            <span class="btn-cv__arrow" aria-hidden="true"></span>
+            <hr class="btn-cv__rule" />
+          </span>
+          <span class="label">Télécharger mon CV complet</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .cv-entry { display: flex; flex-direction: column; gap: 10px; }
+  .cv-entry__title {
+    font-family: var(--font-sans);
+    font-weight: var(--fw-regular);
+    font-size: 20px;
+    margin: 0;
+  }
+  .cv-entry__meta { display: flex; flex-direction: column; gap: 5px; }
+  .cv-entry__meta p { font-family: var(--font-sans); font-size: 14px; margin: 0; }
+  .cv-column { display: flex; flex-direction: column; gap: 30px; }
+  .cv-column__heading { font-family: var(--font-sans); font-size: 32px; margin: 0; }
+  .cv-list { display: flex; flex-direction: column; gap: 20px; }
+</style>

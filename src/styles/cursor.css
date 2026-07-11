@@ -1,0 +1,58 @@
+/* =========================================================================
+   CURSEUR CUSTOM — "Vert Pomme"
+   Élément div positionné en fixed, suivi via JS (voir js/cursor.js).
+   Anime uniquement transform/opacity pour la performance.
+   Classes dédiées pour permettre d'ajouter des animations plus élaborées
+   plus tard (ex. GSAP) sans toucher au HTML/JS de base.
+   ========================================================================= */
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-pomme);
+  pointer-events: none;
+  z-index: 9999;
+  /* Le point de départ (0,0) est recentré via translate(-50%, -50%) dans le transform JS */
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  transition:
+    transform 0.15s cubic-bezier(0.25, 1, 0.5, 1),
+    /* HOOK ANIMATION FUTURE : remplacer par un easing plus élaboré (ex. spring GSAP) */
+    opacity 0.15s ease-out,
+    background-color 0.2s ease-out;
+  will-change: transform;
+}
+
+.cursor--visible {
+  opacity: 1;
+}
+
+/* État survol : éléments interactifs (boutons, cartes, accordéon) */
+.cursor--hover {
+  transform: translate(-50%, -50%) scale(2.2);
+  /* HOOK ANIMATION FUTURE : possibilité d'ajouter un mix-blend-mode ou un label texte ici */
+}
+
+/* État actif/pressé (clic) */
+.cursor--active {
+  transform: translate(-50%, -50%) scale(0.85);
+}
+
+/* Masque le curseur custom quand la souris quitte la fenêtre */
+.cursor--idle {
+  opacity: 0;
+}
+
+@media (hover: none) {
+  /* Pas de curseur custom sur les appareils tactiles */
+  .cursor {
+    display: none;
+  }
+  body {
+    cursor: auto;
+  }
+}

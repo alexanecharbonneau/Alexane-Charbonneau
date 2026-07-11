@@ -1,0 +1,10 @@
+---
+// NavLink retour — flèche seule (aucun libellé dans les maquettes).
+// Correction vs ancien code : le libellé au survol a été retiré.
+interface Props { href: string; label?: string; }
+const { href, label = '' } = Astro.props;
+---
+<a class="link-back" href={href} data-cursor-hover aria-label="Retour">
+  <span class="link-back__arrow" aria-hidden="true"></span>
+  {label && <span class="link-back__label">{label}</span>}
+</a>

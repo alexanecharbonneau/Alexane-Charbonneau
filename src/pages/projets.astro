@@ -1,0 +1,38 @@
+---
+// Page PROJETS (frame Figma 2:4).
+import Base from '../layouts/Base.astro';
+import Chip from '../components/Chip.astro';
+import BackLink from '../components/BackLink.astro';
+import ProjectRow from '../components/ProjectRow.astro';
+---
+<Base title="Portfolio — Alexane Charbonneau" bodyGap="45px">
+  <div class="screen__content" style="display:flex;flex-direction:column;gap:30px;">
+    <BackLink href="/" label="Accueil" />
+    <div style="display:flex;flex-direction:column;gap:60px;">
+      <Chip label="Portfolio" />
+      <p class="text-body" style="width:400px;margin:0;">
+        J’affectionne tout particulièrement ce qui est aussi agréable à utiliser qu’à
+        regarder. C’est pile à cette jonction que se situe mon travail.
+      </p>
+    </div>
+  </div>
+
+  <!-- Projets/Onglets/Headers : liste bord à bord du viewport -->
+  <div style="display:flex;flex-direction:column;width:100%;">
+    <ProjectRow
+      href="/projets/le-circuit-du-medicament"
+      title="Le circuit du médicament"
+      tags={["Design de service", "Recherche UX"]}
+    />
+    <ProjectRow
+      href="/projets/murmur"
+      title="MürMur"
+      tags={["Design d’interaction", "Recherche UX"]}
+    />
+    <ProjectRow
+      href="/projets/barbie-et-le-feminisme"
+      title="Barbie &amp; le féminisme ?"
+      tags={["Design graphique"]}
+    />
+  </div>
+</Base>

@@ -1,0 +1,336 @@
+---
+// Page PROJET — Le circuit du médicament
+// Contenu repris de l’ancien site (déjà revérifié en Figma), aligné maquette :
+//  flèche retour sans libellé + chemins d’assets absolus (/assets/…).
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Le circuit du médicament — Alexane Charbonneau" bodyGap="0px">
+  <nav slot="pre" class="section-nav" id="section-nav" aria-label="Navigation entre les sections"></nav>
+    <div class="screen__content" style="display:flex;flex-direction:column;gap:45px;padding-bottom:60px;padding-left:0;padding-right:0;box-sizing:border-box;">
+      <div class="case-back">
+        <a class="link-back" href="/projets" data-cursor-hover>
+          <img src="/assets/svg/arrow-back.svg" alt="" />
+          <span class="link-back__label">Projets</span>
+        </a>
+      </div>
+
+        <div class="case-hero">
+          <p class="case-hero__title">Le circuit du médicament</p>
+          <div class="tags-row">
+            <div class="tag-group">
+              <p class="tag-group__label">Expertises</p>
+              <div class="tag-group__list">
+                <p class="tag-group__item">Design de service</p>
+                <p class="tag-group__item">Recherche UX</p>
+              </div>
+            </div>
+            <div class="tag-group">
+              <p class="tag-group__label">Équipe</p>
+              <div class="tag-group__list">
+                <p class="tag-group__item">Alexane Charbonneau</p>
+                <p class="tag-group__item">Myriam Couture</p>
+              </div>
+            </div>
+            <div class="tag-group">
+              <p class="tag-group__label">Contexte</p>
+              <div class="tag-group__list">
+                <p class="tag-group__item">Projet d'intervention de fin de maîtrise</p>
+              </div>
+            </div>
+            <div class="tag-group">
+              <p class="tag-group__label">Destinataire</p>
+              <div class="tag-group__list">
+                <p class="tag-group__item">CISSS de Chaudière-Appalaches</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Liste d'onglets : Projets/Onglets/Layout, Projet=Medicaments -->
+      <div class="accordion">
+
+        <!-- Section 1 : Mise en contexte -->
+        <div class="accordion-item" id="mise-en-contexte">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Mise en contexte</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <p class="section-block__title">Nature du projet</p>
+              <p class="section-block__text">Ce projet s’inscrit dans le cursus de la maîtrise en design d’interaction de l’Université Laval (DES-6016).</p>
+              <p class="section-block__text">Il s’agissait de la première collaboration entre le client et les étudiants de la MDI.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Mandat et objectifs d’intervention</p>
+              <p class="section-block__text">Dans les hôpitaux du Centre intégré de santé et de services sociaux (CISSS) de Chaudière-Appalaches, de nombreux médicaments ensachés préparés pour les unités de soins sont retournés à la pharmacie.<br><br>Cette problématique est particulièrement marquée dans un hôpital du réseau. Le volume de retours y est si élevé qu’un barème de rejet a été mis en place afin de limiter le temps consacré à la remise en inventaire et de réduire les coûts associés.</p>
+            </div>
+
+            <div class="panel-block">
+              <div class="item-grid">
+                <div class="item-card">
+                  <p class="item-card__eyebrow"><span class="item-card__eyebrow-icon"></span>Objectif #1 · Analyser</p>
+                  <p class="item-card__text">Analyser le fonctionnement actuel du service des médicaments ensachés au sein de l’hôpital.</p>
+                </div>
+                <div class="item-card">
+                  <p class="item-card__eyebrow"><span class="item-card__eyebrow-icon"></span>Objectif #2 · Comprendre</p>
+                  <p class="item-card__text">Comprendre les processus du service des médicaments ensachés et les interactions entre les acteurs et les entités impliquées.</p>
+                </div>
+                <div class="item-card">
+                  <p class="item-card__eyebrow"><span class="item-card__eyebrow-icon"></span>Objectif #3 · Identifier</p>
+                  <p class="item-card__text">Identifier les principaux défis ainsi que les opportunités d’amélioration du service des médicaments ensachés en fonction des réalités du terrain.</p>
+                </div>
+                <div class="item-card">
+                  <p class="item-card__eyebrow"><span class="item-card__eyebrow-icon"></span>Objectif #4 · Recommander</p>
+                  <p class="item-card__text">Recommander des pistes d’optimisation du service des médicaments ensachés à partir des constats issus de l’analyse.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+        <!-- Section 2 : Démarche -->
+        <div class="accordion-item" id="demarche">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Démarche</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <div class="figure">
+                <div class="img-box" style="aspect-ratio:3/1;"><span class="img-box__label">[Schéma : démarche de recherche terrain]</span></div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Recherche ethnographique</p>
+              <p class="section-block__text">Nous avons menés une recherche terrain exhaustive sur cinq semaines. Cette première étape nous a offert l’opportunité de se déplacer à l’hôpital, sur les différentes unités de soins et départements impliqués dans le circuit de médicament ensachés. Nous avons user de plusieurs méthodes de recherche ethnographique, telle que des collectes de données qualitatives et quantitatives, des entrevues informelles et de la recherche documentaire afin de construire notre compréhension du contexte et du sujet*.</p>
+              <p class="section-block__note">*Pour des raisons de confidentialité, il n’est pas possible publier les traces de notre démarche.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Analyse</p>
+              <p class="section-block__text">Notre compréhension globale s’est affinée au fur et à mesure à l’aide de schémas visuels clairs, nous permettant d’illustrer visuellement le service en temps réel sur les différentes unités et départements de l’hôpital. Cet exercice nous a permis de dégager une piste de problématique probable.</p>
+            </div>
+
+            <div class="section-block">
+              <div class="figure">
+                <p class="figure__caption">Vue d’ensemble des services</p>
+                <div class="img-box" style="aspect-ratio:1000/300;"><span class="img-box__label">[Schéma : vue d’ensemble des services]</span></div>
+              </div>
+              <div class="figure">
+                <p class="figure__caption">Fonctionnement du reservice</p>
+                <div class="img-box" style="aspect-ratio:1000/334;"><span class="img-box__label">[Schéma : fonctionnement du reservice]</span></div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Problématique principale</p>
+              <p class="section-block__text">Dans le cadre du reservice (service générant le plus de retours), la préparation et la distribution des médicaments reposent sur une logique d’anticipation figée dans le temps. Ainsi, les modifications apportées aux ordonnances après le moment alloué à la préparation des médicaments par la pharmacie ne sont pas prises en compte.</p>
+              <p class="section-block__text">Cette problématique n’est pas un enjeu inconnu de l’hôpital. Toutefois la présenter à la lumière d’un langage visuel commun a permis aux acteurs d’en saisir les différentes subtilités.</p>
+              <div class="figure">
+                <p class="figure__caption">Décalage temporel</p>
+                <div class="img-box" style="aspect-ratio:1500/634;"><span class="img-box__label">[Schéma : décalage temporel]</span></div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Élargissement de la problématique</p>
+              <p class="section-block__text">Bien que le décalage temporel permette d’expliquer une part importante des retours de médicaments, il ne permet pas à lui seul de rendre compte de l’ensemble des dynamiques observées sur le terrain.</p>
+              <p class="section-block__text">La démarche s’est donc élargie afin d’inclure d’autres dimensions du circuit des médicaments ensachés, au-delà de cet enjeu de synchronisation.</p>
+              <p class="section-block__text">Ce travail a permis de mettre en lumière des enjeux de nature :</p>
+            </div>
+
+            <div class="panel-block">
+              <div class="item-grid item-grid--3col">
+                <div class="item-card">
+                  <p class="item-card__eyebrow" style="font-size:20px;">Humaine</p>
+                  <p class="item-card__text">En lien avec les réalités de travail du personnel, la culture organisationnelle et la manière dont les équipes s’adaptent au quotidien.</p>
+                </div>
+                <div class="item-card">
+                  <p class="item-card__eyebrow" style="font-size:20px;">Opérationnelle</p>
+                  <p class="item-card__text">En lien avec les outils et les systèmes utilisés ainsi qu’avec les normes et les procédures qui structurent le circuit des médicaments.</p>
+                </div>
+                <div class="item-card">
+                  <p class="item-card__eyebrow" style="font-size:20px;">Informationnelle</p>
+                  <p class="item-card__text">En lien avec la circulation et la compréhension de l’information entre les acteurs et les systèmes.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+        <!-- Section 3 : Conception -->
+        <div class="accordion-item" id="conception">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Conception</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <p class="section-block__title">Constats</p>
+              <p class="section-block__text">Notre démarche s’est transposer dans un rapport interactif, destinés d’abords aux gestionnaires et leurs équipes. Il était important pour eux que rendre ce rapport pertinent dans l’objectif qu’il puisse s’en servir comme outil de travail concret.</p>
+              <p class="section-block__text">Nous avons donc monté un rapport complet, pensé comme un outil à part entière. Le rapport est un livrable interactif, permettant à l’utilisateur de naviguer librement entre les différentes sections. Certaines pages sont liées entre-elles, offrant la possibilité d’accéder à des informations complémentaires. La diversité des utilisateurs potentiels ont motivés nos choix de hiérarchie de l’information, mises-en page et <em>flows</em> de navigation.<br><br>Tout d’abords, huit constats ont été élaborés.</p>
+            </div>
+
+            <div class="panel-block">
+              <ol class="numbered-grid" style="list-style:none;padding:0;margin:0;">
+                <li class="numbered-item"><span class="numbered-item__index">1.</span><span>Haut taux d’imprévisibilité opérationnelle dans le circuit des médicaments</span></li>
+                <li class="numbered-item"><span class="numbered-item__index">2.</span><span>Forte interdépendance entre les acteurs et les technologies</span></li>
+                <li class="numbered-item"><span class="numbered-item__index">3.</span><span>Coopération marquée par des frictions répétées entre la pharmacie et les unités de soins</span></li>
+                <li class="numbered-item"><span class="numbered-item__index">4.</span><span>Décalage entre les normes et procédures et les réalités du terrain</span></li>
+                <li class="numbered-item"><span class="numbered-item__index">5.</span><span>Développement de stratégies d’adaptation par le personnel</span></li>
+                <li class="numbered-item"><span class="numbered-item__index">6.</span><span>Processus de retour des médicaments ensachés fragmenté</span></li>
+                <li class="numbered-item"><span class="numbered-item__index">7.</span><span>Environnement de travail caractérisé par des contraintes matérielles et spatiales</span></li>
+                <li class="numbered-item"><span class="numbered-item__index">8.</span><span>Ouverture au changement exprimée par le personnel</span></li>
+              </ol>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__text">Chaque constat est accompagné d’une fiche explicative, basée sur des cas de figures réellement observés lors de notre recherche, appuis nos propos et la nature du constat.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="figure__caption">Fiches explicatives (Constats #3, Constats #6)</p>
+              <div class="sheet-grid">
+                <div class="sheet-card"><span class="img-box__label">[CONSTATS_Page_1]</span></div>
+                <div class="sheet-card"><span class="img-box__label">[CONSTATS_Page_2]</span></div>
+              </div>
+              <div class="sheet-grid">
+                <div class="sheet-card"><span class="img-box__label">[CONSTATS_Page_3]</span></div>
+                <div class="sheet-card"><span class="img-box__label">[CONSTATS_Page_4]</span></div>
+              </div>
+            </div>
+
+            <div class="section-block" style="align-items:center;">
+              <p class="section-block__title" style="text-align:center;width:100%;">Recommandations</p>
+              <p class="section-block__text">En ayant maintenant une base solide sur laquelle s’appuyer, nous avons élaborer sept recommandations pour venir limiter les effets de la problématique élargie.<br><br>Les recommandations ont été classées selon deux grands thèmes et horizon de faisabilité, afin de faciliter le repérage et la distinction entre-elles.</p>
+            </div>
+
+            <div class="panel-block">
+              <div class="reco-theme">
+                <p class="reco-theme__title">Circuit de retour des médicaments</p>
+                <div class="reco-grid">
+                  <div class="reco-item">
+                    <p class="reco-item__text"><span>1.</span><span>Intégrer une pige manuelle dans le service des cabinets Pyxis</span></p>
+                    <span class="reco-tag reco-tag--court">Court à moyen terme</span>
+                  </div>
+                  <div class="reco-item">
+                    <p class="reco-item__text"><span>2.</span><span>Adapter le barème de rejet des médicaments en fonction de leur potentiel de réutilisation</span></p>
+                    <span class="reco-tag reco-tag--court">Court à moyen terme</span>
+                  </div>
+                  <div class="reco-item">
+                    <p class="reco-item__text"><span>3.</span><span>Simplifier les codes et l’outil associés au barème de rejet des médicaments</span></p>
+                    <span class="reco-tag reco-tag--court">Court à moyen terme</span>
+                  </div>
+                  <div class="reco-item">
+                    <p class="reco-item__text"><span>4.</span><span>Adapter la norme de gestion des dates de péremption aux pratiques actuelles</span></p>
+                    <span class="reco-tag reco-tag--long">Long terme*</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reco-theme">
+                <p class="reco-theme__title">Mécanismes de communication</p>
+                <div class="reco-grid">
+                  <div class="reco-item">
+                    <p class="reco-item__text"><span>5.</span><span>Mettre en place une rencontre mensuelle structurée entre la pharmacie et les unités de soins</span></p>
+                    <span class="reco-tag reco-tag--court">Court à moyen terme</span>
+                  </div>
+                  <div class="reco-item">
+                    <p class="reco-item__text"><span>6.</span><span>Créer un canal de communication continu entre les unités et la pharmacie</span></p>
+                    <span class="reco-tag reco-tag--court">Court à moyen terme</span>
+                  </div>
+                  <div class="reco-item">
+                    <p class="reco-item__text"><span>7.</span><span>Moderniser le monte-charge utilisé dans le circuit du médicament</span></p>
+                    <span class="reco-tag reco-tag--long">Long terme*</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="reco-note">*Les recommandations à long terme dépassent le cadre d’intervention actuel, mais ont émergé de manière récurrente comme des leviers importants lors de la recherche.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="figure__caption">Fiches explicatives (Recommandation #3)</p>
+              <div class="sheet-grid">
+                <div class="sheet-card"><span class="img-box__label">[reco_Page_1]</span></div>
+                <div class="sheet-card"><span class="img-box__label">[reco_Page_2]</span></div>
+              </div>
+            </div>
+
+            <div class="section-block" style="align-items:center;">
+              <p class="section-block__title" style="text-align:center;width:100%;">Annexes</p>
+            </div>
+
+            <div class="section-block">
+              <div class="annexe-block">
+                <p class="annexe-block__text">En supplément, des annexes sont référencées tout au long de la lecture du rapport afin d’enrichir la compréhension de l’utilisateur. Les annexes regroupent de courts compléments théoriques liés au design. Chaque notion est expliquées en combinant contenu textuel, références bibliographiques et schéma d’accompagnement.</p>
+                <div class="annexe-carousel">
+                  <div class="annexe-carousel__frame">
+                    <span class="img-box__label">[Livrable — Rapport d’intervention, page 01]</span>
+                  </div>
+                  <div class="annexe-carousel__controls">
+                    <button type="button" data-carousel-prev data-cursor-hover aria-label="Planche précédente">
+                      <img src="/assets/svg/arrow-back.svg" alt="" />
+                    </button>
+                    <button type="button" data-carousel-next data-cursor-hover aria-label="Planche suivante">
+                      <img src="/assets/svg/arrow-back.svg" alt="" style="transform:scaleX(-1);" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+        <!-- Section 4 : Réception et contribution -->
+        <div class="accordion-item" id="reception-et-contribution">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Réception et contribution</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <p class="section-block__title">Réception</p>
+              <p class="section-block__text">Nous avons orchestrée une présentation du rapport, ainsi que faciliter un espace de communication entre les différentes parties prenantes afin de clore notre intervention. Cette initiative a permis aux acteurs de recevoir l’information dans un langage commun, et de nous poser des questions au besoin. Le rapport a ensuite été remis aux gestionnaires ciblés.</p>
+              <p class="section-block__text">Le rapport, de même que l’ensemble de la démarche ont été très bien accueille par le client. En considérant la nature plus délicate de certains constats et la complexité de la problématique, il nous a été relaté que notre intervention s’est avérée très utile et éclairante pour les équipes à l’hôpital.</p>
+              <p class="section-block__text">Le client s’est montré curieux de la démarche de design et a précisé être ouvert à poursuivre la collaboration avec les étudiants de la maîtrise en design d’interaction dans un futur proche.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Contribution</p>
+              <p class="section-block__text">J’ai contribué à toutes les étapes du projets. Naturellement, la démarche a parfois permis une division équitable des tâches, selon les forces de chaque coéquipières.</p>
+              <p class="section-block__text">J’ai donc pu investir davantage de mon temps dans la conception du rapport final (navigation, direction artistique, conception technique), ainsi qu’à réalisation des schémas et la création des annexes, notamment.</p>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+      </div>
+  <script>
+    import '../../scripts/accordion.js';
+    import '../../scripts/section-nav.js';
+  </script>
+</Base>

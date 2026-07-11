@@ -1,0 +1,40 @@
+---
+// Page ACCUEIL (frame Figma 224:609).
+import Base from '../layouts/Base.astro';
+import Chip from '../components/Chip.astro';
+---
+<Base title="Alexane Charbonneau — Portfolio" bodyGap="100px">
+  <main class="screen__content" style="display:flex;flex-direction:column;gap:60px;">
+    <Chip label="Bienvenue !" style="margin-top:55px;" />
+
+    <div style="display:flex;flex-direction:column;gap:100px;">
+      <p class="h1" style="text-align:left;">
+        Je m’appelle<span class="text-emphasis"> Alexane </span><br />
+        et je suis designer.
+      </p>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+        <div style="display:flex;align-items:center;gap:60px;">
+          <!-- Profile, State=Hover (état unique du DS, affiché en permanence) -->
+          <div class="profile">
+            <div class="profile__frame"></div>
+            <img
+              class="profile__photo"
+              src="/assets/img/accueil/F1020004.JPG"
+              alt="Portrait d’Alexane Charbonneau"
+            />
+          </div>
+          <p class="text-body" style="width:300px;margin:0;">
+            Ma pratique relève d’un heureux mélange de design d’interaction et d’interface.
+          </p>
+        </div>
+
+        <!-- Buttons/Component (CTA) : icône ancrée, libellé révélé au survol. -->
+        <a class="nav-cta" href="/projets" data-cursor-hover style="width:207px;">
+          <span class="nav-cta__label">Consulter mon portfolio</span>
+          <span class="nav-cta__arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </main>
+</Base>

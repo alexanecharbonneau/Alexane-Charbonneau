@@ -1,0 +1,396 @@
+/* =========================================================================
+   COMPOSANTS DU DESIGN SYSTEM
+   Un bloc CSS par composant Figma. Le nom du composant Figma est indiqué
+   en commentaire pour garder la traçabilité entre le fichier source et
+   le code.
+   ========================================================================= */
+
+/* ---- NavBar/Component (Header, Footer) ----
+   Toute la largeur du VIEWPORT (pas seulement le canevas 1024px), fixe en
+   haut (header) et en bas (footer) de l'écran. Le contenu interne
+   (NameTag/Tabs) reste centré dans une colonne de 1024px via .navbar__inner. */
+
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--color-beige);
+  z-index: 100;
+}
+
+.navbar:not(.navbar--footer) {
+  top: 0;
+}
+
+.navbar--footer {
+  top: auto;
+  bottom: 0;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* Pleine largeur du viewport en tout temps (pas de colonne 1024px). */
+  padding: var(--space-20);
+  box-sizing: border-box;
+}
+
+.navbar__nametag {
+  /* NavBar/NameTag, Style=Default. Pas d'état "Hover" formellement défini
+     dans le fichier Figma — traitement cohérent avec le reste du site
+     (soulignement au survol) ajouté pour indiquer que le nom ramène à
+     l'accueil, comme demandé. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-20);
+  /* Hauteur fixe + line-height numérique : la bascule de police au survol
+     (Inclusive Sans → Editorial Old) ne change plus la hauteur → pas de glitch. */
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.navbar__nametag .label-nametag {
+  line-height: 1;
+}
+
+.navbar__nametag:hover .label-nametag {
+  /* Survol : bascule en PP Editorial Old italique (pas de soulignement). */
+  font-family: var(--font-serif-italic);
+  font-style: italic;
+}
+
+.navbar__tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-20);
+}
+
+.navbar__tab {
+  /* NavBar/Tabs, State=Default/Hover : le hover Figma ajoute un trait
+     sous tout le lien (pas un changement d'opacité). */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 var(--space-20);
+  height: 45px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease-out;
+}
+
+.navbar__tab:hover {
+  border-bottom-color: currentColor;
+}
+
+.navbar__tab-icon {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+.navbar__footer-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 10px var(--space-20);
+}
+
+/* ---- NavLink/Accueil, NavLink/Projets (bouton retour) ----
+   Confirmé dans Figma (Buttons/Component, style="Portfolio") : la boîte du
+   bouton réserve toujours plus de largeur que l'icône seule (ex. 118px de
+   boîte pour une icône de 38px) — l'espace en trop est occupé par un
+   libellé qui apparaît au survol (opacity 0→1), l'icône restant ancrée.
+   Le libellé exact n'a pas pu être revérifié dans cette passe (voir
+   commentaire dans le HTML) ; un intitulé de destination raisonnable est
+   utilisé en attendant confirmation. */
+
+.link-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-20);
+  height: 25px;
+}
+
+/* Flèche de retour recolorable via mask : beige foncé par défaut,
+   anthracite au survol (même traitement que la flèche CTA de l'accueil). */
+.link-back__arrow {
+  width: 38px;
+  height: 25px;
+  flex-shrink: 0;
+  background-color: var(--color-beige-fonce);
+  -webkit-mask: url('/assets/svg/arrow-back.svg') no-repeat center / contain;
+  mask: url('/assets/svg/arrow-back.svg') no-repeat center / contain;
+  transition: background-color 0.15s ease-out;
+}
+
+.link-back:hover .link-back__arrow {
+  background-color: var(--color-anthracite);
+}
+
+/* Compat : anciennes flèches encore en <img> dans .link-back (le cas échéant). */
+.link-back img {
+  width: 38px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.link-back__label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  color: var(--color-anthracite);
+  white-space: nowrap;
+  opacity: 0;
+  /* Révélé au survol, sans déplacement (bouton statique). */
+  transition: opacity 0.15s ease-out;
+}
+
+.link-back:hover .link-back__label {
+  opacity: 1;
+}
+
+/* ---- Buttons/Component (CTA héro Accueil : "Consulter mon portfolio") ----
+   Même logique de réserve d'espace que .link-back : icône ancrée à droite,
+   libellé révélé au survol sur la gauche de l'icône. */
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-20);
+}
+
+.nav-cta__label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  color: var(--color-anthracite);
+  /* Boîte de 105px, libellé révélé au survol (sans déplacement). */
+  width: 105px;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.15s ease-out;
+}
+
+.nav-cta:hover .nav-cta__label {
+  opacity: 1;
+}
+
+/* Flèche recolorable via mask : beige foncé par défaut, anthracite au survol. */
+.nav-cta__arrow {
+  flex-shrink: 0;
+  width: 76px;
+  height: 50px;
+  background-color: var(--color-beige-fonce);
+  -webkit-mask: url('/assets/svg/arrow-large-right.svg') no-repeat center / contain;
+  mask: url('/assets/svg/arrow-large-right.svg') no-repeat center / contain;
+  transition: background-color 0.15s ease-out;
+}
+
+.nav-cta:hover .nav-cta__arrow {
+  background-color: var(--color-anthracite);
+}
+
+/* ---- Projet / Chip ---- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start; /* empêche le chip de s'étirer dans un parent flex-column */
+  width: fit-content;
+  padding: 10px var(--space-20);
+  border-radius: var(--radius-pill);
+  background: var(--color-pomme);
+}
+
+/* ---- Buttons/Component (Style=CV) ----
+   Rangée pleine largeur dans Figma, mais alignée à droite (confirmé) : le
+   bouton lui-même reste ancré au bord droit de la colonne de lecture de
+   1024px plutôt qu'au bord du viewport. */
+
+.btn-cv-row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: var(--screen-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-20);
+  color: var(--color-beige-fonce);
+  transition: color 0.2s ease-out;
+}
+
+.btn-cv:hover {
+  color: var(--color-anthracite);
+}
+
+.btn-cv__icon-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-cv__icon-stack img {
+  width: 25px;
+  height: 25px;
+}
+
+.btn-cv__rule {
+  width: 36px;
+  height: 1px;
+  background: currentColor;
+  border: none;
+  margin: 0;
+}
+
+/* ---- Profile (photo + cadre dentelé) ----
+   Le cadre dentelé provient d'un export SVG natif du vecteur "Union" de
+   Figma (assets/svg/mask-scalloped.svg), utilisé ici en clip-path pour
+   rester pixel-perfect à la forme d'origine plutôt que de l'approximer. */
+
+.profile {
+  position: relative;
+  width: 209px;
+  height: 232px;
+  flex-shrink: 0;
+}
+
+.profile__frame {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 207px;
+  height: 230px;
+  background: var(--color-beige-moyen);
+  clip-path: url(#scallop-clip);
+}
+
+.profile__photo {
+  /* Simplification assumée : Figma applique un 2e masque dentelé, redimensionné,
+     directement sur la photo (effet "timbre-poste" à double contour). On obtient
+     ici un rendu visuellement équivalent avec un simple retrait (matting) qui
+     laisse apparaître le cadre dentelé tout autour — signalé comme choix. */
+  position: absolute;
+  left: 19px;
+  top: 21px;
+  width: 170px;
+  height: 190px;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+}
+
+/* ---- Projets/Onglets/Headers (liste de prévisualisation, écran Projets) ----
+   Composant Figma revérifié par capture d'écran directe (node 63:348) :
+   Default = titre 56px sans-serif, pas de bordure.
+   Hover = titre 46px "Emphasis Large" italique, bordure bas 2px anthracite
+   pleine largeur, ET (élément manquant dans la 1re passe) apparition à
+   droite des chips d'expertise du projet + une flèche longue vers le bas
+   (icône dédiée, distincte de la flèche CV). */
+
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height: 135px;
+  /* Noms de projets alignés sur la marge de 110px. */
+  padding: 10px var(--space-110);
+  background: var(--color-beige-moyen);
+  /* Hover : ligne 1px beige foncé (token design system). */
+  border-bottom: 1px solid transparent;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-out;
+}
+
+.project-row:hover {
+  border-bottom-color: var(--color-beige-fonce);
+}
+
+.project-row__title {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-h1);
+  line-height: normal;
+  margin: 0;
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.project-row:hover .project-row__title {
+  font-family: var(--font-serif-italic);
+  font-style: italic;
+  font-size: var(--fs-emphasis-large);
+}
+
+.project-row__meta {
+  display: none;
+  align-items: center;
+  gap: 30px;
+  flex-shrink: 0;
+}
+
+.project-row:hover .project-row__meta {
+  display: flex;
+}
+
+.project-row__tags {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.project-row__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: var(--radius-pill);
+  background: var(--color-beige);
+  color: var(--color-gris);
+  font-family: var(--font-sans);
+  font-size: var(--fs-text-small);
+  white-space: nowrap;
+}
+
+.project-row__arrow {
+  width: 25px;
+  height: 43px;
+  display: block;
+  /* Beige foncé par défaut, anthracite au survol de la ligne. */
+  background-color: var(--color-beige-fonce);
+  transition: background-color 0.2s ease-out;
+  -webkit-mask: url('/assets/svg/arrow-down-long.svg') no-repeat center / contain;
+  mask: url('/assets/svg/arrow-down-long.svg') no-repeat center / contain;
+}
+
+/* Flèche des lignes de projet : anthracite au survol de la ligne. */
+.project-row:hover .project-row__arrow {
+  background-color: var(--color-anthracite);
+}
+
+/* ===== Ajustements ===== */
+/* CV : icône flèche suit la couleur du bouton (beige foncé → anthracite). */
+.btn-cv__arrow {
+  width: 25px; height: 25px;
+  background-color: currentColor;
+  -webkit-mask: url('/assets/svg/arrow-small-down.svg') no-repeat center / contain;
+  mask: url('/assets/svg/arrow-small-down.svg') no-repeat center / contain;
+}
+/* Photo d'accueil : zoom 25%. */
+.profile { overflow: hidden; }
+.profile__photo { transform: scale(1.25); }
+/* Lignes de projet : flèche visible par défaut (beige foncé), tags au survol. */
+.project-row__meta { display: flex; }
+.project-row__tags { display: none; }
+.project-row:hover .project-row__tags { display: flex; }

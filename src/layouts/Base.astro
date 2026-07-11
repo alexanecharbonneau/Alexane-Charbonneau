@@ -1,0 +1,58 @@
+---
+// Layout de base — <head>, polices, structure d'écran (header/footer fixes),
+// curseur custom. Interactivité minimale : un seul script global (curseur),
+// vanilla, pas de framework.
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/cursor.css';
+import '../styles/components.css';
+import '../styles/case-study.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ScallopDefs from '../components/ScallopDefs.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Gap vertical du .screen__body (varie selon la maquette). */
+  bodyGap?: string;
+}
+const {
+  title = 'Alexane Charbonneau',
+  description = 'Portfolio d’Alexane Charbonneau — designer d’interaction et d’interface.',
+  bodyGap = '45px',
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Emplacement pour un élément hors-écran (ex. nav latérale des études de cas). -->
+    <slot name="pre" />
+
+    <ScallopDefs />
+
+    <div class="screen">
+      <div class="screen__body" style={`gap:${bodyGap};`}>
+        <Header />
+        <slot />
+      </div>
+      <Footer />
+    </div>
+
+    <script>
+      import '../scripts/cursor.js';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+/* =========================================================================
+   BASE — reset + fondations typographiques + layout d'écran
+   ========================================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-beige);
+  color: var(--color-anthracite);
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  /* Curseur natif masqué partout : remplacé par le curseur custom (voir cursor.js) */
+  cursor: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: none;
+}
+
+/* ---- Typographie ---- */
+
+.h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-h1);
+  line-height: normal;
+  margin: 0;
+}
+
+.h1 em,
+.text-emphasis {
+  font-family: var(--font-serif-italic);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+}
+
+.h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-h2);
+  line-height: normal;
+  margin: 0;
+}
+
+.emphasis-large {
+  font-family: var(--font-serif-italic);
+  font-style: italic;
+  font-size: var(--fs-emphasis-large);
+  line-height: normal;
+  margin: 0;
+}
+
+.text-strong {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-text-strong);
+  line-height: normal;
+}
+
+.text-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-text-body);
+  line-height: normal;
+  margin: 0;
+}
+
+.label-nametag {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-label-nametag);
+  line-height: normal;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-label);
+  line-height: normal;
+}
+
+.text-small {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-text-small);
+  line-height: normal;
+}
+
+.note {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-note);
+  line-height: normal;
+}
+
+.emphasis-note {
+  font-family: var(--font-serif-italic);
+  font-style: italic;
+  font-size: var(--fs-note);
+  line-height: normal;
+}
+
+/* ---- Layout d'écran ----
+   Desktop uniquement pour cette phase (maquette 1024px).
+   Le NavBar/Component (header + footer) est désormais position:fixed et
+   couvre toute la largeur du viewport (pas seulement le canevas 1024px) :
+   .screen compense avec un padding-top/bottom égal à sa hauteur mesurée. */
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+  box-sizing: border-box;
+}
+
+.screen__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+/* Colonne de lecture centrée à 1024px — pour le contenu textuel (titres,
+   tags, paragraphes). Les bandes pleine largeur (NavBar, Projets/Onglets/
+   Headers, Projets/Onglets/Layout) restent volontairement HORS de cette
+   classe pour pouvoir s'étendre bord à bord du viewport. */
+.screen__content {
+  /* Pleine largeur, aligné à gauche sur une marge de 110px (comme les
+     sections d'étude de cas). Plus de colonne 1024px centrée. */
+  width: 100%;
+  padding-left: var(--space-110);
+  padding-right: var(--space-110);
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

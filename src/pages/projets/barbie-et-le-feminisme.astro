@@ -1,0 +1,261 @@
+---
+// Page PROJET — Barbie & le féminisme ? (frame Figma 192:342).
+// NOUVELLE page. Textes extraits des états « ouverts » Figma (frame 281:331).
+// Les images sont des placeholders dimensionnés à l'identique (ratio + bordure) :
+// déposer les exports dans public/assets/img/barbie/ (voir manifeste README).
+import Base from '../../layouts/Base.astro';
+---
+<Base title={"Barbie & le féminisme ? — Alexane Charbonneau"} bodyGap="0px">
+  <nav slot="pre" class="section-nav" id="section-nav" aria-label="Navigation entre les sections"></nav>
+
+  <div
+    class="screen__content"
+    style="display:flex;flex-direction:column;gap:45px;padding-bottom:60px;padding-left:0;padding-right:0;box-sizing:border-box;"
+  >
+    <div class="case-back">
+      <a class="link-back" href="/projets" data-cursor-hover aria-label="Retour">
+        <span class="link-back__arrow" aria-hidden="true"></span>
+          <span class="link-back__label">Projets</span>
+      </a>
+    </div>
+
+    <div class="case-hero">
+      <p class="case-hero__title">Barbie &amp; le féminisme ?</p>
+      <div class="tags-row">
+        <div class="tag-group">
+          <p class="tag-group__label">Expertise</p>
+          <div class="tag-group__list">
+            <p class="tag-group__item">Design graphique</p>
+          </div>
+        </div>
+        <div class="tag-group">
+          <p class="tag-group__label">Équipe</p>
+          <div class="tag-group__list">
+            <p class="tag-group__item">Alexane Charbonneau</p>
+            <p class="tag-group__item">Alexann Guertin</p>
+          </div>
+        </div>
+        <div class="tag-group">
+          <p class="tag-group__label">Contexte</p>
+          <div class="tag-group__list">
+            <p class="tag-group__item">Projet réalisé dans un cadre scolaire</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Liste d'onglets : Projets/Onglets/Layout, Projet=Barbie -->
+  <div class="accordion">
+
+    <!-- Section 1 : Mise en contexte -->
+    <div class="accordion-item" id="mise-en-contexte">
+      <button class="accordion-item__header" type="button" data-cursor-hover>
+        <span class="accordion-item__header-row">
+          <span class="accordion-item__title">Mise en contexte</span>
+        </span>
+      </button>
+      <div class="accordion-item__body">
+        <div class="accordion-item__divider"></div>
+
+        <div class="section-block">
+          <p class="section-block__title">Nature du projet</p>
+          <p class="section-block__text">Ce projet s’inscrit dans le cursus de la maîtrise en design d’interaction de l’Université Laval (DES-2624).</p>
+        </div>
+
+        <div class="section-block">
+          <p class="section-block__title">Mise en contexte</p>
+          <p class="section-block__text">Le mandat consistait à partir de la prémisse d’un sujet d’actualité au choix afin de se forger un regard neuf sur l’enjeu qu’il sous-tend. La visualisation d’information a été retenue comme médium pour transmettre ce propos.</p>
+          <p class="section-block__text">Barbie est-elle réellement une figure du féminisme, ou demeure-t-elle prisonnière des stéréotypes qu’elle prétend briser ? Avec cette visualisation d’information, nous avons choisi de plonger au cœur de cette question. Non pas pour y apporter une réponse définitive, mais pour provoquer une réflexion que nous jugeons nécessaire.</p>
+          <p class="section-block__text">Le projet propose un contraste assumé avec l’approche traditionnelle de la poupée et invite à l’envisager sous un angle critique et contemporain.</p>
+        </div>
+
+        <div class="section-block">
+          <p class="section-block__title">Message et public cible</p>
+          <p class="section-block__text">Notre intention était d’informer le lecteur des aspects positifs et négatifs de la poupée Barbie d’un point de vue féministe, sans trancher à sa place. La visualisation s’adresse à un public adulte, majoritairement féminin et francophone, qu’il soit amateur de la marque ou non.</p>
+          <p class="section-block__text">Nous voulions amener à revisiter un objet familier avec un œil critique.</p>
+        </div>
+
+        <div class="accordion-item__divider"></div>
+      </div>
+    </div>
+
+    <!-- Section 2 : Démarche -->
+    <div class="accordion-item" id="demarche">
+      <button class="accordion-item__header" type="button" data-cursor-hover>
+        <span class="accordion-item__header-row">
+          <span class="accordion-item__title">Démarche</span>
+        </span>
+      </button>
+      <div class="accordion-item__body">
+        <div class="accordion-item__divider"></div>
+
+        <div class="section-block">
+          <p class="section-block__title">Recherche</p>
+          <div style="display:flex;gap:30px;align-items:flex-start;width:100%;">
+            <div style="flex:1 0 0;min-width:0;display:flex;flex-direction:column;gap:15px;">
+              <p class="section-block__text">Nous avons mené une recherche documentaire exhaustive afin de nous imprégner du sujet. La lecture d’articles et d’ouvrages, l’écoute de balados, le visionnement de documentaires et d’œuvres cinématographiques nous ont permis de saisir toute l’histoire et le contexte politique du jouet, depuis sa commercialisation par Mattel en 1959.</p>
+              <p class="section-block__text">Cette immersion nous a amenées à nous défaire des stéréotypes et des préconceptions que nous entretenions à l’égard de cet artéfact de notre enfance.</p>
+            </div>
+            <div class="figure" style="width:374px;flex:0 0 auto;">
+              <p class="figure__caption" style="font-size:var(--fs-note);">Carte heuristique produite dans le cadre de nos recherches</p>
+              <div class="img-box" style="height:281px;min-height:0;"><span class="img-box__label">carte-heuristique</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <p class="section-block__title">Recadrage critique de la problématique</p>
+          <p class="section-block__text">Le projet a été réalisé dans la foulée du succès du film <em>Barbie</em> de Greta Gerwig (2023). Phénomène culturel ayant marqué plusieurs générations, Barbie appelait selon nous à être réexaminée. Nous avons donc choisi de poser une lentille féministe sur tout ce que la poupée implique, afin d’en dégager autant les avancées que les contradictions.</p>
+        </div>
+
+        <div class="panel-block">
+          <p class="section-block__title">Objectif de la visualisation</p>
+          <p class="section-block__text">Notre objectif était de montrer l’évolution de Barbie en parallèle des mouvements culturels occidentaux, afin de mettre en évidence son influence, notamment sur le plan du féminisme.</p>
+          <p class="section-block__text">Plutôt que de dresser un portrait unilatéral, nous avons cherché à faire cohabiter, dans une même pièce, les critiques adressées à la poupée et les avancées qu’elle a portées.</p>
+        </div>
+
+        <div class="section-block">
+          <p class="section-block__title">Itérations et défis rencontrés</p>
+          <p class="section-block__text">Le principal défi tenait à la matière : Barbie génère une quantité colossale d’information qualitative, souvent contradictoire. Plutôt que de subir cette abondance, nous en avons fait un levier, en triangulant nos sources pour dégager des blocs de texte courts et vulgarisés, et en construisant une lentille féministe claire qui donnait un fil conducteur à l’ensemble.</p>
+          <p class="section-block__text">Un autre enjeu était d’assumer un regard critique sans imposer de verdict. Nous avons transformé cette tension en principe de conception : faire cohabiter les critiques et les avancées de la poupée dans une même pièce, et laisser au lecteur l’espace de se forger sa propre opinion. Cet équilibre a guidé autant la rédaction franche et assumée que la hiérarchie de l’information.</p>
+          <p class="section-block__text">Enfin, il fallait traduire ce propos visuellement. L’exploration de plusieurs directions artistiques et la création d’une police sur mesure nous ont permis de résoudre un problème concret, soit un fort volume de texte à rendre digeste, tout en renforçant l’identité critique et spontanée de l’affiche. Chaque itération de mise en page répondait ainsi à un même objectif : transmettre le contenu le plus clairement possible, sans en étouffer l’énergie.</p>
+        </div>
+
+        <div class="accordion-item__divider"></div>
+      </div>
+    </div>
+
+    <!-- Section 3 : Conception -->
+    <div class="accordion-item" id="conception">
+      <button class="accordion-item__header" type="button" data-cursor-hover>
+        <span class="accordion-item__header-row">
+          <span class="accordion-item__title">Conception</span>
+        </span>
+      </button>
+      <div class="accordion-item__body">
+        <div class="accordion-item__divider"></div>
+
+        <div class="section-block">
+          <p class="section-block__title">Direction artistique</p>
+          <p class="section-block__text">Pour casser les codes de la marque, nous avons opté pour une esthétique grunge et bariolée, enrichie d’un style inspiré de la prise de notes. Ce parti pris interpelle directement le spectateur : il donne l’impression que c’est lui-même qui aurait griffonné, annoté et critiqué le projet. Les typographies manuscrites, les textures brutes et les ajouts graphiques spontanés créent une connexion émotionnelle avec le public, comme si ce dernier participait activement au débat. Cette approche traduit un dialogue ouvert, tout en maintenant un impact visuel fort et cohérent.</p>
+          <p class="section-block__text">Cette direction est le fruit d’une exploration structurée : nous avons développé plusieurs planches de style avant d’arrêter nos choix. L’overprint duochrome a été retenu pour uniformiser la palette, simplifier le tracé de la Barbie et assumer le côté « fait main » ; la texture granuleuse, pour contraster en douceur avec la nature controversée des sujets abordés ; et le collage schématique, pour marier harmonieusement photos et éléments manuscrits au sein d’une grille flexible. La circularité, présente jusque dans la ligne du temps, structure enfin la lecture de l’information.</p>
+        </div>
+
+        <div class="section-block">
+          <p class="section-block__title">Recherche visuelle de différents styles graphiques</p>
+        </div>
+        <div class="case-media">
+          <div class="moodboard-grid">
+            <div class="figure"><div class="img-box" style="aspect-ratio:322/208;min-height:0;"><img src="/assets/img/barbie/moodboards_S9_Page_1.png" alt="Planche de style 1" /></div></div>
+            <div class="figure"><div class="img-box" style="aspect-ratio:322/208;min-height:0;"><img src="/assets/img/barbie/moodboards_S9_Page_2.png" alt="Planche de style 2" /></div></div>
+            <div class="figure"><div class="img-box" style="aspect-ratio:322/208;min-height:0;"><img src="/assets/img/barbie/moodboards_S9_Page_3.png" alt="Planche de style 3" /></div></div>
+            <div class="figure"><div class="img-box" style="aspect-ratio:322/208;min-height:0;"><img src="/assets/img/barbie/moodboards_S9_Page_6.png" alt="Planche de style 6" /></div></div>
+            <div class="figure"><div class="img-box" style="aspect-ratio:322/208;min-height:0;"><img src="/assets/img/barbie/moodboards_S9_Page_5.png" alt="Planche de style 5" /></div></div>
+            <div class="figure"><div class="img-box" style="aspect-ratio:322/208;min-height:0;"><img src="/assets/img/barbie/moodboards_S9_Page_4.png" alt="Planche de style 4" /></div></div>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <p class="section-block__title">Police de caractères</p>
+          <p class="section-block__text">Nous avons conçu une police de caractères spécialement pour ce projet. Son tracé imite l’aspect brut et spontané d’une écriture au marqueur, réalisée sans trop s’appliquer. Chaque glyphe a été dessiné à la main puis testé afin d’obtenir un alphabet complet et cohérent. Ce choix graphique vise une esthétique délibérément imparfaite, pleine de caractère et d’émotion. Il souligne l’authenticité et le côté non filtré de notre message, en parfait accord avec l’esprit critique et engagé de l’affiche.</p>
+        </div>
+
+        <div class="media-panel">
+          <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:2160/1620;min-height:0;"><img src="/assets/img/barbie/tests_typo_custom_Page_4.png" alt="Test de police manuscrite 4" /></div></div>
+          <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:2160/1620;min-height:0;"><img src="/assets/img/barbie/tests_typo_custom_Page_5.png" alt="Test de police manuscrite 5" /></div></div>
+        </div>
+        <div class="case-media">
+          <p class="figure__caption" style="font-size:var(--fs-note);">Itérations de différentes polices manuscrites</p>
+        </div>
+        <div class="media-panel">
+          <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:2160/1620;min-height:0;"><img src="/assets/img/barbie/tests_typo_custom_Page_1.png" alt="Test de police manuscrite 1" /></div></div>
+          <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:2160/1620;min-height:0;"><img src="/assets/img/barbie/tests_typo_custom_Page_2.png" alt="Test de police manuscrite 2" /></div></div>
+          <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:2160/1620;min-height:0;"><img src="/assets/img/barbie/tests_typo_custom_Page_7.png" alt="Test de police manuscrite 7" /></div></div>
+          <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:2160/1620;min-height:0;"><img src="/assets/img/barbie/tests_typo_custom_Page_3.png" alt="Test de police manuscrite 3" /></div></div>
+          <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:2160/1620;min-height:0;"><img src="/assets/img/barbie/tests_typo_custom_Page_6.png" alt="Test de police manuscrite 6" /></div></div>
+        </div>
+
+        <div class="section-block">
+          <p class="section-block__title">Structure de la visualisation</p>
+          <p class="section-block__text">La pièce s’organise autour d’une grande Barbie centrale, annotée comme le serait un croquis retravaillé à la main.</p>
+          <p class="section-block__text">De part et d’autre se déploient deux lectures d’une même figure : « GO BARBIE », qui réunit le versant positif de la poupée, et « RIP BARBIE », qui en forme le contrepoids critique, le <em>backlash</em>.</p>
+          <p class="section-block__text">Cette mise en regard structure l’ensemble de l’affiche, chaque avancée trouvant son écho dans une critique, sans que l’une l’emporte sur l’autre.</p>
+          <p class="section-block__text">Au bas de la pièce, une ligne du temps suit l’apparition des carrières de Barbie de 1959 à 2022 et sert de fil chronologique à la lecture.</p>
+        </div>
+
+        <div class="case-media">
+          <div class="figure"><div class="img-box" style="aspect-ratio:4096/2517;min-height:0;"><img src="/assets/img/barbie/affiche-vue.jpg" alt="Affiche - vue d ensemble" /></div></div>
+        </div>
+        <div class="case-media" style="display:flex;flex-direction:column;gap:30px;">
+          <div style="display:flex;gap:30px;align-items:stretch;width:100%;">
+            <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:1590/1412;min-height:0;"><img src="/assets/img/barbie/detail_1.png" alt="Detail de l affiche 1" /></div></div>
+            <div style="display:flex;flex-direction:column;gap:30px;width:158px;flex:0 0 auto;">
+              <div class="figure" style="flex:1 0 0;"><div class="img-box" style="height:100%;min-height:120px;"><img src="/assets/img/barbie/detail_2.png" alt="Detail de l affiche 2" /></div></div>
+              <div class="figure" style="flex:1 0 0;"><div class="img-box" style="height:100%;min-height:120px;"><img src="/assets/img/barbie/detail_3.png" alt="Detail de l affiche 3" /></div></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:30px;align-items:stretch;width:100%;">
+            <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:1590/1412;min-height:0;"><img src="/assets/img/barbie/detail_4.png" alt="Detail de l affiche 4" /></div></div>
+            <div class="figure" style="flex:1 0 0;min-width:0;"><div class="img-box" style="aspect-ratio:1590/1412;min-height:0;"><img src="/assets/img/barbie/detail_5.png" alt="Detail de l affiche 5" /></div></div>
+          </div>
+          <div class="figure"><div class="img-box" style="aspect-ratio:3324/308;min-height:0;"><img src="/assets/img/barbie/ligne-du-temps.png" alt="Ligne du temps" /></div></div>
+        </div>
+
+        <div class="accordion-item__divider"></div>
+      </div>
+    </div>
+
+    <!-- Section 4 : Livrables -->
+    <div class="accordion-item" id="livrables">
+      <button class="accordion-item__header" type="button" data-cursor-hover>
+        <span class="accordion-item__header-row">
+          <span class="accordion-item__title">Livrables</span>
+        </span>
+      </button>
+      <div class="accordion-item__body">
+        <div class="accordion-item__divider"></div>
+
+        <div class="section-block">
+          <p class="section-block__title">Visualisation d’information</p>
+          <p class="section-block__text">Notre travail a été imprimé en grand format sur un papier texturé, s’agençant parfaitement à la facture visuelle de notre travail.</p>
+        </div>
+
+        <div class="figure" style="width:100%;">
+          <div class="img-box" style="aspect-ratio:3244/4096;min-height:0;"><img src="/assets/img/barbie/Affiche_finale.jpg" alt="Affiche finale" /></div>
+        </div>
+
+        <div class="accordion-item__divider"></div>
+      </div>
+    </div>
+
+    <!-- Section 5 : Contribution -->
+    <div class="accordion-item" id="contribution">
+      <button class="accordion-item__header" type="button" data-cursor-hover>
+        <span class="accordion-item__header-row">
+          <span class="accordion-item__title">Contribution</span>
+        </span>
+      </button>
+      <div class="accordion-item__body">
+        <div class="accordion-item__divider"></div>
+
+        <div class="section-block">
+          <p class="section-block__title">Réception</p>
+          <p class="section-block__text">Le projet a été présenté à mi-parcours puis en fin de démarche, devant un jury réuni en salle de classe et composé de deux professionnels de la visualisation d’information. Notre approche politique de la poupée Barbie y a été très bien accueillie.</p>
+        </div>
+
+        <div class="section-block">
+          <p class="section-block__title">Contribution</p>
+          <p class="section-block__text">J’ai contribué à toutes les étapes du projet. Naturellement, la démarche a parfois permis une division équitable des tâches, selon les forces de chaque coéquipière. J’ai donc pu investir davantage de mon temps dans l’élaboration de la direction artistique et la rédaction des contenus textuels.</p>
+        </div>
+
+        <div class="accordion-item__divider"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    import '../../scripts/accordion.js';
+    import '../../scripts/section-nav.js';
+  </script>
+</Base>

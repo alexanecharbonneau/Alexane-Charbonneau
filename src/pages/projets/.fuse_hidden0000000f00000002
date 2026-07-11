@@ -1,0 +1,388 @@
+---
+// Page PROJET — MürMur
+// Contenu repris de l’ancien site (déjà revérifié en Figma), aligné maquette :
+//  flèche retour sans libellé + chemins d’assets absolus (/assets/…).
+import Base from '../../layouts/Base.astro';
+---
+<Base title="MürMur — Alexane Charbonneau" bodyGap="0px">
+  <nav slot="pre" class="section-nav" id="section-nav" aria-label="Navigation entre les sections"></nav>
+    <div class="screen__content" style="display:flex;flex-direction:column;gap:45px;padding-bottom:60px;padding-left:0;padding-right:0;box-sizing:border-box;">
+      <div class="case-back">
+        <a class="link-back" href="/projets" data-cursor-hover>
+          <img src="/assets/svg/arrow-back.svg" alt="" />
+          <span class="link-back__label">Projets</span>
+        </a>
+      </div>
+
+        <div class="case-hero">
+          <p class="case-hero__title">MürMur</p>
+          <div class="tags-row">
+            <div class="tag-group">
+              <p class="tag-group__label">Expertises</p>
+              <div class="tag-group__list">
+                <p class="tag-group__item">Design d’interaction</p>
+                <p class="tag-group__item">Recherche UX</p>
+              </div>
+            </div>
+            <div class="tag-group">
+              <p class="tag-group__label">Équipe</p>
+              <div class="tag-group__list">
+                <p class="tag-group__item">Alexane Charbonneau</p>
+                <p class="tag-group__item">Maëlanne Armstrong</p>
+                <p class="tag-group__item">Émilie Goupil-Nantel</p>
+              </div>
+            </div>
+            <div class="tag-group">
+              <p class="tag-group__label">Contexte</p>
+              <div class="tag-group__list">
+                <p class="tag-group__item">Projet réalisé dans un cadre scolaire</p>
+              </div>
+            </div>
+            <div class="tag-group">
+              <p class="tag-group__label">Mention</p>
+              <div class="tag-group__list">
+                <p class="tag-group__item">Projet sélectionné à la compétition étudiante de design du <a href="https://2026.hci.international/Student_Design_Competition-Video_Presentations.html" target="_blank" data-cursor-hover>HCII2026</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Liste d'onglets : Projets/Onglets/Layout, Projet=MurMur -->
+      <div class="accordion">
+
+        <!-- Section 1 : Mise en contexte -->
+        <div class="accordion-item" id="mise-en-contexte">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Mise en contexte</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <p class="section-block__title">Nature du projet</p>
+              <p class="section-block__text">Ce projet s’inscrit dans le cursus de la maîtrise en design d’interaction de l’Université Laval (DES-6012).</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Mise en contexte</p>
+              <p class="section-block__text">L’anxiété de performance est une forme d’anxiété générée par l’anticipation d’un échec ou par l’appréhension qu’a une personne quant à sa capacité à accomplir une tâche ou une action conformément à des attentes. C’est un phénomène avec lequel les étudiant·es universitaires sont bien familier·ères; or, dans la littérature comme dans les médias, on entend surtout parler de l’anxiété de performance au premier cycle.</p>
+              <p class="section-block__text">Toutefois, les recherches actuelles identifient un risque plus élevé de problèmes de santé mentale parmi les étudiant·es aux cycles supérieurs par rapport à la population générale. En effet, plus d’un tiers des étudiant·es aux cycles supérieurs souffrent ou ont souffert de troubles anxieux au cours de leurs études, une tendance en hausse depuis 2005.</p>
+              <p class="section-block__text">Comment se fait-il, alors, qu’on en parle si peu et, surtout, comment cette situation peut-elle être améliorée?</p>
+            </div>
+
+            <div class="section-block">
+              <div class="figure-row">
+                <div class="figure" style="max-width:500px;">
+                  <p class="figure__caption">Équation de l’anxiété de perfromance</p>
+                  <div class="img-box" style="aspect-ratio:500/271.85;"><span class="img-box__label">[Schéma : équation de l’anxiété de performance]</span></div>
+                </div>
+                <p class="card__text" style="flex:1 0 0;">L’anxiété de performance survient lorsqu’il y a un déséquilibre entre les attentes et la compétence perçues.<br><br>L’anxiété de performance dite sociale est plus souvent répertoriée, car elle est plus facile à détecter.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+        <!-- Section 2 : Recherche -->
+        <div class="accordion-item" id="recherche">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Recherche</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <div class="figure-row">
+                <div class="figure" style="flex:1 0 0;">
+                  <p class="section-block__title" style="margin-bottom:6px;">Méthodes de recherche</p>
+                  <p class="section-block__text">Nous avons utiliser cinq méthodes de recherche afin de couvrir la question sous plusieurs angles. La combinaison de ces méthodes nous a permis d’avoir un large regard sur le sujet qui nous était, à priori, inconnu.</p>
+                </div>
+                <div class="figure" style="flex:1 0 0;">
+                  <div class="img-box" style="aspect-ratio:4096/2499;"><span class="img-box__label">[Schéma : méthodes de recherche]</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-block">
+              <p class="section-block__title" style="padding:0;">Objectif de recherche</p>
+              <p class="section-block__text" style="padding:0;">Comprendre comment les personnes étudiantes aux cycles supérieurs vivent, perçoivent et composent avec l’anxiété de performance au quotidien, afin d’éclairer la démarche de design d’une solution en réponse à cette problématique.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Journal de bord</p>
+              <p class="section-block__text">Pendant deux semaines, chaque membre de notre équipe a consigné nos expériences quotidiennes à partir de trois questions récurrentes :</p>
+              <div class="journal-list">
+                <p class="journal-bubble">Comment ça va aujourd’hui?</p>
+                <p class="journal-bubble">Dirais-tu que tu étais anxieux·se aujourd’hui?</p>
+                <p class="journal-bubble">Quels facteurs ont influencé ton anxiété (ou son absence)?</p>
+              </div>
+              <p class="section-block__text">Cette démarche d’autoethnographie a permis de schématiser le fonctionnement, a priori abstrait, de l’anxiété de performance comme un cycle influencé par des facteurs aggravants, des déclencheurs et des facteurs apaisants.</p>
+              <p class="section-block__text">Cette vision cyclique a orienté l’identification de nos leviers d’intervention ainsi que la formulation des questions utilisées pour les <em>Graffiti Walls</em>.</p>
+            </div>
+
+            <div class="section-block" style="align-items:center;">
+              <p class="figure__caption" style="text-align:center;width:100%;"><em>Cognitive Mapping</em> de nos journaux de bord</p>
+              <div class="img-box" style="aspect-ratio:500/392.8;max-width:500px;"><span class="img-box__label">[Cognitive mapping des journaux de bord]</span></div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title" style="font-style:italic;">Graffiti Walls</p>
+              <div class="figure-row">
+                <p class="section-block__text" style="flex:1 0 0;padding:0;">Installés dans des lieux fréquentés de l’université, nos murs d’expression (<em>Graffiti Walls</em>) ont permis aux étudiant·es de participer simplement à nos recherches.<br><br>Chaque installation présentait une question invitant les étudiant·es aux cycles supérieurs à témoigner sur différentes facettes de l’anxiété de performance. Au total, huit dispositifs sont restés en place pendant environ quatorze jours.<br><br>Ces données anonymes ont été mises en relation dans un diagramme d’affinité afin d’en faire ressortir les tendance.</p>
+                <div class="figure" style="flex:1 0 0;">
+                  <p class="figure__caption">Diagramme d’affinité</p>
+                  <div class="img-box" style="aspect-ratio:4/3;"><span class="img-box__label">[Diagramme d’affinité]</span></div>
+                </div>
+              </div>
+              <div class="figure">
+                <p class="figure__caption">Graffiti Walls utilisés pour notre recherche</p>
+                <div class="img-box" style="aspect-ratio:4096/1134;"><span class="img-box__label">[Photos : Graffiti Walls utilisés pour la recherche]</span></div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title" style="font-style:italic;">Love Letters + Breakup Letters</p>
+              <p class="section-block__text">Nous cherchions également à mieux comprendre la relation qu’entretiennent les étudiant·es des cycles supérieurs avec leur programme d’études.</p>
+              <p class="section-block__text">Au total, onze étudiant·es gradué·es de divers domaines du savoir, à la maîtrise et au doctorat, ont chacun·e rédigé deux lettres à leur programme : une lettre d’amour et une lettre de rupture. La vingtaine de lettres ainsi obtenue a été analysée par codage thématique afin d’en faire ressortir les grands thèmes et nourrir notre compréhension.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Entretiens semi-dirigés</p>
+              <p class="section-block__text">Parallèlement aux autres méthodes de recherche, nous avons mené des entretiens semi-dirigés avec des expert·es afin d’élargir et d’affiner notre compréhension de l’anxiété de performance aux études supérieures.</p>
+            </div>
+
+            <div class="card-grid">
+              <div class="card">
+                <p class="card__title">Dr Louis Dallaire</p>
+                <p class="card__text">Avec le Dr Dallaire, psychologue clinicien et enseignant, nous avons clarifié ce qu’est l’anxiété et ses différentes formes, ainsi que la façon dont elle se manifeste concrètement dans les milieux d’enseignement, ce qui nous a offert une base théorique solide mais accessible.</p>
+              </div>
+              <div class="card">
+                <p class="card__title">Dr William Gilbert</p>
+                <p class="card__text">L’entretien avec le Dr Gilbert, professeur de psychologie à l’UQAR, a mobilisé la théorie de l’autodétermination, centrée sur les besoins d’autonomie, de compétence et de relation aux autres, et nous a permis de repositionner MürMur comme un soutien à la motivation, au sentiment de compétence et au lien social.</p>
+              </div>
+              <div class="card">
+                <p class="card__title">Dr Pierre Bleau</p>
+                <p class="card__text">Le Dr Bleau, psychiatre systémique retraité et ancien directeur national des services en santé mentale et en psychiatrie légale du Québec, a introduit le cadre de la salutogénèse, qui met l’accent sur les ressources et les facteurs favorisant la santé plutôt que sur la seule pathologie.</p>
+              </div>
+              <div class="card">
+                <p class="card__title">Dre Annie Pilote</p>
+                <p class="card__text">Enfin, la Dre Pilote, sociologue de l’éducation et doyenne de la Faculté des études supérieures et postdoctorales de l’Université Laval, a apporté une perspective institutionnelle et sociale en soulignant le rôle des structures d’encadrement, des attentes académiques et des inégalités dans l’expérience de l’anxiété de performance.</p>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Observation non-participante</p>
+              <p class="section-block__text">Puisque l’anxiété de performance relève d’un vécu difficile à saisir de l’extérieur, nous nous sommes appuyées sur des contenus numériques publiés par des étudiant·es où iels documentent leur quotidien académique.</p>
+              <p class="section-block__text">Des contenus vidéos, souvent répertoriés sous des titres tels que « passez une nuit blanche à réviser avec moi », « une journée dans ma semaine d’examens » ou « étudiez 12 h en ligne en ma compagnie » mettent en scène une culture de l’hyperproductivité et de la comparaison constante.</p>
+              <p class="section-block__text">En portant aussi attention aux discussions dans les sections de commentaires, nous avons pu constater que ces pratiques, pourtant nocives, sont souvent saluées, imitées ou enviées, comme si elles représentaient un idéal de performance scolaire.</p>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+        <!-- Section 3 : Conception -->
+        <div class="accordion-item" id="conception">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Conception</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <p class="section-block__title">Constats</p>
+              <p class="section-block__text">L’analyse de l’ensemble des données qualitatives récoltés dans la phase de recherche nous a permis de dégager cinq constats principaux. Ces derniers nous ont servis de pilliers pour la conception.</p>
+            </div>
+
+            <div class="section-block" style="padding:0 220px;">
+              <div style="display:flex;gap:30px;width:100%;">
+                <div style="display:flex;flex-direction:column;gap:10px;flex:1 0 0;">
+                  <div class="img-box" style="aspect-ratio:3668/536;"><span class="img-box__label">[Constat 1]</span></div>
+                  <div class="img-box" style="aspect-ratio:3548/852;"><span class="img-box__label">[Constat 2]</span></div>
+                  <div class="img-box" style="aspect-ratio:3923/929;"><span class="img-box__label">[Constat 3]</span></div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px;flex:1 0 0;">
+                  <div class="img-box" style="aspect-ratio:3582/835;"><span class="img-box__label">[Constat 4]</span></div>
+                  <div class="img-box" style="aspect-ratio:3634/786;"><span class="img-box__label">[Constat 5]</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Opportunité de design</p>
+              <p class="section-block__text">À la suite de nos recherches, deux leviers sur lesquels il nous semblait pertinent d’agir se sont dégagés.</p>
+              <p class="section-block__text">D’abord, la solitude caractéristique des études de deuxième et troisième cycles, liée à une structure de parcours qui diffère grandement de celle du baccalauréat. À ce stade, il ne s’agit plus d’assister régulièrement à des cours avec une cohorte, mais plutôt de poursuivre un sujet de recherche, souvent en solo. Les étudiant·es se retrouvent davantage livré·es à eux et elles-mêmes, ce qui peut entraîner un choc et un fort sentiment de solitude.</p>
+              <p class="section-block__text">Ensuite, les études de deuxième et troisième cycles s’étendent souvent sur plusieurs années, donnant parfois l’impression de ne jamais voir la fin. Dans ce contexte, une opportunité de design se dessine : recréer des liens, non seulement entre les étudiant·es, mais aussi entre les cohortes, en faisant intervenir les personnes diplômées.</p>
+              <p class="section-block__text">Ainsi, nous cherchons à renforcer directement le sentiment de cohérence, en rappelant aux étudiant·es qu’iels ne sont pas seul·es et que leurs efforts finiront par porter leurs fruits.</p>
+
+              <p class="section-block__title">La salutogénèse</p>
+              <p class="section-block__text">Un des experts interviewés nous a parlé de salutogenèse, modèle théorique développé par Aaron Antonovsky en 1979, qui s’intéresse moins aux causes de la maladie qu’aux facteurs favorisant la santé et le bien-être.</p>
+
+              <div class="figure-row">
+                <div class="figure" style="max-width:500px;">
+                  <p class="figure__caption">Schéma du sentiment de cohérence</p>
+                  <div class="img-box" style="aspect-ratio:500/434;"><span class="img-box__label">[Schéma du sentiment de cohérence]</span></div>
+                </div>
+                <p class="card__text" style="flex:1 0 0;">Le sentiment de cohérence (SOC) est au cœur de la salutogénèse. Il représente la disposition globale d’une personne à percevoir sa vie comme compréhensible, gérable et porteuse de sens.<br><br>Les relations sociales consistent en un facteur très important favorisant le sentiment de cohérence chez un individu.</p>
+              </div>
+              <p class="section-block__text">Cela met en lumière l’importance du soutien social, du sentiment d’appartenance et de la normalisation du vécu pour redonner sens, cohérence et humanité au parcours étudiant.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Solution proposée</p>
+              <p class="section-block__text">À la lumière de nos recherches, de notre compréhension de l’anxiété de performance aux cycles supérieurs et de notre analyse du contexte universitaire actuel, nous avons constaté qu’il existe une anxiété de performance largement répandue, mais peu partagée. Face à cet enjeu, nous avons imaginé MürMur.</p>
+              <div class="img-box" style="aspect-ratio:4096/559;"><span class="img-box__label">[Aperçu de MürMur]</span></div>
+              <p class="section-block__text">MürMur est un babillard numérique collectif intégré au portail étudiant. C’est un espace simple, humain et horizontal pour reconnecter.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Fonctionnalités et caractéristiques</p>
+              <p class="figure__caption">Fonctionnement de MürMur</p>
+              <div class="img-box" style="aspect-ratio:4096/1536;"><span class="img-box__label">[Schéma : fonctionnement de MürMur]</span></div>
+            </div>
+
+            <div class="card-grid">
+              <div class="card">
+                <p class="card__title">Temporalité et mémoire collective</p>
+                <p class="card__text">La métaphore du babillard est centrale : on y dépose une pensée pour libérer de l’espace mental, sans exigence de performance. L’ensemble des notes, liées à un moment précis du parcours (doute, fatigue, soulagement), s’efface après une semaine, rappelant que ce que l’on vit est temporaire.<br><br>Cet effacement progressif nourrit brièvement une mémoire collective en mouvement.</p>
+              </div>
+              <div class="card">
+                <p class="card__title">Approche salutogénique</p>
+                <p class="card__text">Ancré dans une approche salutogénique, MürMur n’aborde pas l’anxiété comme un problème individuel à corriger, mais agit sur les conditions collectives qui soutiennent le bien-être.<br><br>Il rend l’expérience académique plus compréhensible, plus gérable et plus signifiante en montrant que d’autres vivent la même chose et en reliant le présent à l’« après » grâce à la présence des diplômé·es.</p>
+              </div>
+              <div class="card">
+                <p class="card__title">Un espace simple et léger</p>
+                <p class="card__text">MürMur est volontairement minimaliste, sobre et accessible : on ne crée pas de compte, on n’apprend pas à utiliser un nouvel outil numérique. Son intégration au portail institutionnel, combinée à des mécanismes de modération automatisés, contribue à maintenir un espace sécurisant et bienveillant, tout en permettant, au besoin, une redirection vers des ressources de soutien plus spécialisées.</p>
+              </div>
+              <div class="card">
+                <p class="card__title">Pertinence dans le contexte actuel</p>
+                <p class="card__text">Dans un contexte universitaire marqué par la compétition, l’individualisation de la réussite et la centralité des métriques de performance, l’anxiété de performance est alimentée par la solitude et la comparaison silencieuse.<br><br>MürMur intervient dans l’espace discret de la reconnaissance mutuelle, en retissant du lien entre cohortes et en renforçant l’intelligence collective.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+        <!-- Section 4 : Évaluation — AJOUT (présente dans la maquette, absente
+             de l'ancien code). Contenu détaillé à intégrer depuis Figma. -->
+        <div class="accordion-item" id="evaluation">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Évaluation</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <p class="section-block__title">Une évaluation continue</p>
+              <p class="section-block__text">Fidèle à notre approche participative, l’évaluation ne s’est pas limitée à une étape finale. Dès la recherche, la méthode des <em>Graffiti Walls</em> a joué un double rôle : nourrir notre compréhension du problème, mais aussi éprouver en conditions réelles la disposition à s’exprimer de façon anonyme, un principe au cœur de MürMur.</p>
+              <p class="section-block__text">La quantité et la qualité des témoignages récoltés ont confirmé une hypothèse fondatrice : les étudiant·es universitaires sont disposé·es à partager leur vécu de l’anxiété de performance, pourvu que l’anonymat soit préservé.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Test d’utilisabilité du prototype</p>
+              <p class="section-block__text">Dans un second temps, nous avons mené un test utilisateur sur le prototype final, réalisé en très haute fidélité afin de recréer une expérience proche du réel.</p>
+              <p class="section-block__text">Il a été conduit avec une personne récemment diplômée, représentative de notre public cible. Le prototype comportait deux onglets principaux : le <em>Hub</em>, qui regroupe l’ensemble des Mürs, et un Mür, le babillard propre à un programme. Trois tâches ont été soumises : naviguer dans l’interface, écrire et déplacer une note, puis choisir et placer un autocollant.</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Résultats</p>
+              <p class="section-block__text">L’objectif principal était d’évaluer l’orientation dans l’interface, soit la clarté et l’intuitivité des éléments de navigation. Les trois tâches ont été accomplies avec succès, dans un temps jugé réaliste, ce qui confirme la lisibilité de la structure <em>Hub / Mür.</em> Le test a aussi fait émerger des ajustements sur les libellés du menu principal, que nous avons directement intégrés au prototype final, un aller-retour concret entre évaluation et conception.</p>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+        <!-- Section 5 : Livrables -->
+        <div class="accordion-item" id="livrables">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Livrables</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <p class="section-block__title" style="margin-bottom:6px;">Prototype intéractif</p>
+              <p class="section-block__text">Un prototype interactif haute fidélité a été créer afin de permettre une navigation concrète dans l’interface.</p>
+              <div class="prototype-embed">
+                <iframe src="https://embed.figma.com/proto/10WPVgRGdgDeaL4VvSj45K/Prototype---M%C3%BCrMur?team_id=1447725294865570913&node-id=136-225&page-id=136%3A208&starting-point-node-id=136%3A225&scaling=contain&content-scaling=responsive&embed-host=share" allowfullscreen loading="lazy" title="Prototype interactif MürMur"></iframe>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Visualisation d’information</p>
+              <p class="section-block__text">Une visualisation d’information à été mise en page afin de synthétiser l’ensemble de notre démarche.</p>
+              <div class="img-box" style="aspect-ratio:1024/1358.26;max-width:600px;margin:0 auto;"><span class="img-box__label">[Affiche MürMur — visualisation de la démarche]</span></div>
+            </div>
+
+            <div class="section-block">
+              <div class="figure-row">
+                <div class="figure" style="flex:1 0 0;">
+                  <p class="section-block__title" style="margin-bottom:6px;">Vidéo</p>
+                  <p class="section-block__text">Un vidéo complémentaire en anglais a été montés par notre équipe afin de présenter sous un autre angle notre concept et de soumettre notre concept à la compétition étudiante en design du <a href="https://2026.hci.international/Student_Design_Competition-Video_Presentations.html" target="_blank" data-cursor-hover style="text-decoration:underline;">HCII2026</a>.</p>
+                </div>
+                <div class="video-embed" style="flex:1 0 0;">
+                  <iframe src="https://www.youtube-nocookie.com/embed/h5JKgccBDA8" title="Vidéo MürMur — HCII2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Article</p>
+              <p class="section-block__text">Finalement, un article complet a été rédigé et mis-en-page dans l’objectif d’offrir une vue exhaustive et appuyée de notre démarche.</p>
+              <a class="btn-link" href="https://medium.com/@alexanecharbonneau/m%C3%BCrmur-57fa50c7936c" target="_blank" data-cursor-hover>
+                <img src="/assets/svg/arrow-small-diag.svg" alt="" />
+                Accéder à l’article
+              </a>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+        <!-- Section 5 : Mention et contribution -->
+        <div class="accordion-item" id="mention-et-contribution">
+          <button class="accordion-item__header" type="button" data-cursor-hover>
+            <span class="accordion-item__header-row">
+              <span class="accordion-item__title">Mention et contribution</span>
+            </span>
+          </button>
+          <div class="accordion-item__body">
+            <div class="accordion-item__divider"></div>
+
+            <div class="section-block">
+              <p class="section-block__title">Mention</p>
+              <p class="section-block__text">Notre projet a été sélectionné pour le compétition étudiant de design du <a href="https://2026.hci.international/Student_Design_Competition-Video_Presentations.html" target="_blank" data-cursor-hover style="text-decoration:underline;">HCII2026</a>. Cette conférence internationale, ayant lieu à Montréal en 2026, regroupe sous le même toit des professionnels du domaine de l’interaction humain-machine des quatre coins du globes.</p>
+              <p class="section-block__text">La trentaine de projets acceptés à la compétition verront leur vidéo projetés au public durant toute la durée de la convention.</p>
+              <p class="section-block__text">Nous sommes très heureuses et fières d’avoir reçu cette reconnaissance!</p>
+            </div>
+
+            <div class="section-block">
+              <p class="section-block__title">Contribution</p>
+              <p class="section-block__text">J’ai contribué à toutes les étapes du projets. Naturellement, la démarche a parfois permis une division équitable des tâches, selon les forces de chaque coéquipières.</p>
+              <p class="section-block__text">J’ai donc pu investir davantage de mon temps à la direction artistique, la conception du prototype interactif et à la rédaction de l’article, notamment.</p>
+            </div>
+
+            <div class="accordion-item__divider"></div>
+          </div>
+        </div>
+
+      </div>
+  <script>
+    import '../../scripts/accordion.js';
+    import '../../scripts/section-nav.js';
+  </script>
+</Base>
