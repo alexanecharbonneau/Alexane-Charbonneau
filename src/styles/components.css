@@ -80,15 +80,26 @@
   height: 45px;
   border-bottom: 1px solid transparent;
   transition: border-color 0.15s ease-out;
+  /* Contexte de taille pour l'icône (voir .navbar__tab-icon) : même taille
+     que le libellé du bouton (.label, Header/Contact). */
+  font-size: var(--fs-label);
 }
 
 .navbar__tab:hover {
   border-bottom-color: currentColor;
 }
 
+/* Footer/LinkedIn : le libellé utilise .text-small (14px), plus petit que
+   .label (16px) du Header — l'icône doit suivre la même taille. */
+.navbar--footer .navbar__tab {
+  font-size: var(--fs-text-small);
+}
+
 .navbar__tab-icon {
-  width: 25px;
-  height: 25px;
+  /* Hauteur alignée sur la taille du texte du bouton (plutôt qu'une taille
+     fixe de 25px) : largeur libre pour conserver le ratio de l'icône. */
+  height: 1em;
+  width: auto;
   display: block;
 }
 
