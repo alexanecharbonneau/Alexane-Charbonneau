@@ -46,11 +46,11 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* Largeur fixe et identique sur tous les projets : 125px, pour que le
+  /* Largeur fixe et identique sur tous les projets : 150px, pour que le
      texte puisse toujours revenir à la ligne dans sa propre colonne sans
      jamais déborder sur la colonne suivante (marges 110px inchangées). */
   flex: 0 0 auto;
-  width: 125px;
+  width: 150px;
 }
 
 .tag-group__label {
@@ -72,9 +72,9 @@
   font-size: var(--fs-label);
   line-height: normal;
   margin: 0;
-  /* Revient à la ligne dans sa colonne (125px) plutôt que de déborder sur
+  /* Revient à la ligne dans sa colonne (150px) plutôt que de déborder sur
      la colonne suivante. */
-  max-width: 125px;
+  max-width: 150px;
   white-space: normal;
 }
 
