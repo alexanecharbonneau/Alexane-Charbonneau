@@ -106,10 +106,13 @@ import Base from '../../layouts/Base.astro';
           <div class="accordion-item__body">
             <div class="accordion-item__divider"></div>
 
-            <!-- Schéma de la démarche : pleine largeur de la colonne de contenu, marges de 110px conservées. -->
+            <!-- Schéma de la démarche : pleine largeur de la colonne de contenu, marges de 110px conservées.
+                 Ratio aligné sur les dimensions réelles de l'image (1600×754) : l'ancien ratio 3/1 ne
+                 correspondait pas au fichier et créait un lettrboxing (object-fit:contain) qui ajoutait
+                 un espace vide de chaque côté, donnant l'impression d'une double marge. -->
             <div class="section-block">
               <div class="figure">
-                <div class="img-box" style="aspect-ratio:3/1;"><img class="img--transparent" src="/assets/img/circuit/Demarche_recherche_terrain.png" alt="Demarche de recherche terrain" /></div>
+                <div class="img-box" style="aspect-ratio:1600/754;"><img class="img--transparent" src="/assets/img/circuit/Demarche_recherche_terrain.png" alt="Demarche de recherche terrain" /></div>
               </div>
             </div>
 
