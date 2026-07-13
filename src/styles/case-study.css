@@ -46,10 +46,11 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* Largeur fixe et identique sur tous les projets ; élargie pour que le nom
-     le plus long de l'équipe ("Alexane Charbonneau") tienne sur une ligne. */
+  /* Largeur fixe et identique sur tous les projets : 125px, pour que le
+     texte puisse toujours revenir à la ligne dans sa propre colonne sans
+     jamais déborder sur la colonne suivante (marges 110px inchangées). */
   flex: 0 0 auto;
-  width: 230px;
+  width: 125px;
 }
 
 .tag-group__label {
@@ -71,8 +72,10 @@
   font-size: var(--fs-label);
   line-height: normal;
   margin: 0;
-  max-width: 230px;
-  white-space: nowrap;
+  /* Revient à la ligne dans sa colonne (125px) plutôt que de déborder sur
+     la colonne suivante. */
+  max-width: 125px;
+  white-space: normal;
 }
 
 .tag-group__item a {
