@@ -1,0 +1,86 @@
+---
+// MobileGate — page de garde affichée sur tablette/mobile (≤ 1024px).
+// Le site est actuellement conçu uniquement pour desktop (voir le commentaire
+// dans base.css : "Desktop uniquement pour cette phase, maquette 1024px").
+// Plutôt que d'adapter tous les composants à toutes les tailles d'écran,
+// on affiche un écran d'accueil dédié qui invite à revenir sur ordinateur.
+// Rendu sur chaque page via Base.astro, juste avant le reste du contenu.
+---
+<div class="mobile-gate" role="dialog" aria-label="Site optimisé pour ordinateur">
+  <div class="mobile-gate__icon" aria-hidden="true">
+    <svg viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1.5" y="1.5" width="61" height="37" rx="3" stroke="currentColor" stroke-width="2" />
+      <line x1="23" y1="46.5" x2="41" y2="46.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      <line x1="32" y1="38.5" x2="32" y2="46.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+  </div>
+
+  <p class="h2 mobile-gate__title">
+    Ce portfolio est pensé pour <span class="text-emphasis">le grand écran</span>.
+  </p>
+
+  <p class="text-body mobile-gate__text">
+    Il n’est pas encore optimisé pour mobile et tablette. Pour la meilleure expérience,
+    ouvre-le sur un ordinateur.
+  </p>
+
+  <a class="btn-link mobile-gate__contact" href="mailto:alexanecharbonneau@gmail.com" data-cursor-hover>
+    <span class="btn-link__arrow" aria-hidden="true"></span>
+    Me contacter
+  </a>
+</div>
+
+<style>
+  .mobile-gate {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .mobile-gate {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: var(--color-beige);
+      padding: 40px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    /* Empêche le défilement de la mise en page desktop derrière la page de garde. */
+    body:has(.mobile-gate) {
+      overflow: hidden;
+    }
+  }
+
+  .mobile-gate__icon {
+    width: 64px;
+    height: 48px;
+    color: var(--color-beige-fonce);
+  }
+
+  .mobile-gate__icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .mobile-gate__title {
+    max-width: 320px;
+    margin: 0;
+  }
+
+  .mobile-gate__text {
+    max-width: 280px;
+    margin: 0;
+    color: var(--color-anthracite);
+  }
+
+  .mobile-gate__contact {
+    margin-top: 8px;
+  }
+</style>

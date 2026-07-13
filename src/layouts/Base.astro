@@ -10,6 +10,7 @@ import '../styles/case-study.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ScallopDefs from '../components/ScallopDefs.astro';
+import MobileGate from '../components/MobileGate.astro';
 
 interface Props {
   title?: string;
@@ -38,6 +39,9 @@ const {
     />
   </head>
   <body>
+    <!-- Page de garde tablette/mobile : masque tout le reste en dessous de 1024px. -->
+    <MobileGate />
+
     <!-- Emplacement pour un élément hors-écran (ex. nav latérale des études de cas). -->
     <slot name="pre" />
 
