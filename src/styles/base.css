@@ -26,15 +26,16 @@ a {
   text-decoration: none;
 }
 
-/* Couleur de sélection du texte : vert Pomme (identique au curseur custom),
-   au lieu de la couleur rouge/bleue par défaut du navigateur. */
+/* Couleur de sélection du texte : vert Pomme à 50% d'opacité (identique au
+   curseur custom), au lieu de la couleur rouge/bleue par défaut du navigateur.
+   rgba(205, 248, 79) = --color-pomme (#CDF84F) converti en RGB. */
 ::selection {
-  background-color: var(--color-pomme);
+  background-color: rgba(205, 248, 79, 0.5);
   color: var(--color-anthracite);
 }
 
 ::-moz-selection {
-  background-color: var(--color-pomme);
+  background-color: rgba(205, 248, 79, 0.5);
   color: var(--color-anthracite);
 }
 
