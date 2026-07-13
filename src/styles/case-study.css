@@ -37,7 +37,9 @@
   display: flex;
   gap: 45px;
   width: 100%;
-  flex-wrap: wrap;
+  /* Toutes les colonnes doivent rester sur une seule ligne (jamais de retour
+     à la ligne), marges de page (110px) inchangées. */
+  flex-wrap: nowrap;
 }
 
 .tag-group {
