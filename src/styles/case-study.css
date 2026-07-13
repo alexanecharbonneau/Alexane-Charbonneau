@@ -521,8 +521,9 @@
 }
 
 .annexe-carousel__frame {
-  /* Pas de contour ni de marge interne : l'image des annexes remplit
+  /* Contour fin de 1px, pas de marge interne : l'image des annexes remplit
      entièrement le cadre (object-fit: cover, voir plus bas). */
+  border: 1px solid var(--color-beige-fonce);
   background: var(--color-beige-moyen);
   aspect-ratio: 800 / 455;
   display: flex;
