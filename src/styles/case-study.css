@@ -521,14 +521,15 @@
 }
 
 .annexe-carousel__frame {
-  border: 1px solid var(--color-beige-fonce);
+  /* Pas de contour ni de marge interne : l'image des annexes remplit
+     entièrement le cadre (object-fit: cover, voir plus bas). */
   background: var(--color-beige-moyen);
   aspect-ratio: 800 / 455;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
