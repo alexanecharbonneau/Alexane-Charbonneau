@@ -1,0 +1,105 @@
+---
+// Page CONTACT — réunit les moyens de contact (courriel, téléphone, LinkedIn).
+// Reprend le motif des onglets NavBar : texte anthracite lisible, soulignement
+// au survol, flèche diagonale déjà utilisée pour les liens externes.
+import Base from '../layouts/Base.astro';
+import Chip from '../components/Chip.astro';
+import BackLink from '../components/BackLink.astro';
+---
+<Base title="Contact — Alexane Charbonneau" bodyGap="45px">
+  <div class="screen__content" style="display:flex;flex-direction:column;gap:60px;">
+    <BackLink href="/" label="Accueil" />
+
+    <div style="display:flex;flex-direction:column;gap:30px;">
+      <Chip label="Contact" />
+      <p class="text-body" style="width:440px;margin:0;">
+        Une opportunité, un projet ou simplement l’envie d’échanger&nbsp;? Voici
+        comment me joindre — je réponds avec plaisir.
+      </p>
+    </div>
+
+    <div class="contact-list">
+      <div class="contact-item">
+        <p class="contact-item__label">Courriel</p>
+        <a
+          class="contact-link"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=alexanecharbonneau@gmail.com"
+          target="_blank"
+          rel="noopener"
+          data-cursor-hover
+        >
+          <span>alexanecharbonneau@gmail.com</span>
+          <img class="contact-link__icon" src="/assets/svg/arrow-small-diag.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <p class="contact-item__label">Téléphone</p>
+        <a class="contact-link" href="tel:+14189333466" data-cursor-hover>
+          <span>418 933-3466</span>
+          <img class="contact-link__icon" src="/assets/svg/arrow-small-diag.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <p class="contact-item__label">LinkedIn</p>
+        <a
+          class="contact-link"
+          href="https://www.linkedin.com/in/alexanecharbonneau/"
+          target="_blank"
+          rel="noopener"
+          data-cursor-hover
+        >
+          <span>linkedin.com/in/alexanecharbonneau</span>
+          <img class="contact-link__icon" src="/assets/svg/arrow-small-diag.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-item__label {
+    font-family: var(--font-sans);
+    font-size: var(--fs-text-small);
+    color: var(--color-gris);
+    margin: 0;
+  }
+
+  /* Reprend le comportement des onglets NavBar : trait sous le lien au survol
+     (border-bottom en currentColor), plutôt qu'un changement de couleur. */
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    font-family: var(--font-sans);
+    font-size: var(--fs-text-strong);
+    color: var(--color-anthracite);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: border-color 0.15s ease-out;
+  }
+
+  .contact-link:hover {
+    border-bottom-color: currentColor;
+  }
+
+  .contact-link__icon {
+    height: 0.8em;
+    width: auto;
+    display: block;
+  }
+</style>
