@@ -7,10 +7,10 @@ import Chip from '../components/Chip.astro';
 import BackLink from '../components/BackLink.astro';
 ---
 <Base title="Contact — Alexane Charbonneau" bodyGap="45px">
-  <div class="screen__content" style="display:flex;flex-direction:column;gap:60px;">
+  <div class="screen__content" style="display:flex;flex-direction:column;gap:30px;">
     <BackLink href="/" label="Accueil" />
 
-    <div style="display:flex;flex-direction:column;gap:30px;">
+    <div style="display:flex;flex-direction:column;gap:60px;">
       <Chip label="Contact" />
       <p class="text-body" style="width:440px;margin:0;">
         Une opportunité, un projet ou simplement l’envie d’échanger&nbsp;? Voici
@@ -18,7 +18,7 @@ import BackLink from '../components/BackLink.astro';
       </p>
     </div>
 
-    <div class="contact-list">
+    <div class="contact-list" style="margin-top:30px;">
       <div class="contact-item">
         <p class="contact-item__label">Courriel</p>
         <a
