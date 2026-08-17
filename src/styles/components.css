@@ -237,12 +237,16 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-20);
-  color: var(--color-beige-fonce);
-  transition: color 0.2s ease-out;
+  /* Aligné sur les autres liens cliquables (onglets NavBar, liens Contact) :
+     texte anthracite d'emblée + soulignement au survol, plutôt qu'un simple
+     changement de couleur. */
+  color: var(--color-anthracite);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease-out;
 }
 
 .btn-cv:hover {
-  color: var(--color-anthracite);
+  border-bottom-color: currentColor;
 }
 
 .btn-cv__icon-stack {
